@@ -1,0 +1,21 @@
+<h1><%= @restaurant.name %></h1>
+<div class="restaurant-details">
+  <h2>Details</h2>
+  <p><b>Address:</b> <%= @restaurant.address %></p>
+  <p><b>Phone number:</b> <%= @restaurant.phone_number %></p>
+  <p><b>Category:</b> <%= @restaurant.category.capitalize %></p>
+</div>
+
+<div class="restaurant-reviews">
+  <h2>Reviews</h2>
+  <% @reviews.each do |review| %>
+    <div class="review">
+      <p id="rating"><b><%= review.rating %></b></p>
+      <p><%= review.content %></p>
+    </div>
+  <% end %>
+
+  <div class="review-form">
+    <%= render 'reviews/form' %>
+  </div>
+</div>

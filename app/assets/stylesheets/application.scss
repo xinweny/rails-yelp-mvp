@@ -11,3 +11,11 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+@import "restaurants";
+@import "reviews";
+
+.restaurants-header {
+  display: flex;
+  justify-content: space-between;
+}
